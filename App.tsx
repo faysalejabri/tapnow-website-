@@ -91,7 +91,7 @@ export function App() {
         <link rel="canonical" href={getCanonicalUrl()} />
       </Helmet>
       <OrderProvider>
-        <div className="min-h-screen bg-[#F8FAFC] w-full overflow-x-hidden flex flex-col">
+        <div className="min-h-screen bg-[#F8FAFC] w-full overflow-hidden flex flex-col">
         <Navbar 
             currentView={currentView}
             onNavigate={handleNavigate}
