@@ -91,7 +91,7 @@ export function App() {
         <link rel="canonical" href={getCanonicalUrl()} />
       </Helmet>
       <OrderProvider>
-        <div className="min-h-screen bg-[#F8FAFC] w-full max-w-[100vw] overflow-x-hidden relative flex flex-col">
+        <div className="min-h-screen bg-[#F8FAFC] w-full overflow-x-hidden flex flex-col">
         <Navbar 
             currentView={currentView}
             onNavigate={handleNavigate}
@@ -99,7 +99,7 @@ export function App() {
             setLanguage={setLanguage}
             onOrder={handleOrder}
         />
-        <main className="w-full max-w-full flex-grow">
+        <main className="w-full flex-grow flex flex-col items-center">
             {currentView === 'order' ? (
                 <OrderPage 
                     initialPlan={selectedPlan}

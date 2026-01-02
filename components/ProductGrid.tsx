@@ -218,9 +218,9 @@ export const ProductGrid: React.FC<ProductGridProps> = ({language, onOrderClick,
   };
 
   return (
-    <div id={id} className={`bg-white py-24 min-h-screen w-full overflow-hidden ${isShopPage ? 'pt-32' : ''}`}>
+    <div id={id} className={`bg-white py-24 min-h-screen w-full ${isShopPage ? 'pt-32' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center w-full">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="text-center mb-16 max-w-4xl px-4">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="text-center mb-16 max-w-4xl px-4 w-full">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
             {isShopPage ? t.shopH1 : t.title}
           </h1>
@@ -234,7 +234,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({language, onOrderClick,
         </motion.div>
 
         <div className="w-full pt-16 border-t border-slate-100 flex flex-col items-center">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16 w-full">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 px-4">{t.reviewsTitle}</h2>
             <p className="mt-3 max-w-xl text-lg text-slate-500 mx-auto font-medium px-6">{t.reviewsSubtitle}</p>
             </motion.div>

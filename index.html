@@ -49,17 +49,29 @@
     <script type="module" src="index.tsx"></script>
 
     <style>
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
       html, body {
+        margin: 0;
+        padding: 0;
         font-family: 'Inter', sans-serif;
         overflow-x: hidden;
         width: 100%;
         max-width: 100%;
         position: relative;
+        touch-action: manipulation;
       }
-      /* Smooth scrolling */
-      html {
-        scroll-behavior: smooth;
+      #root {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
+      
       /* Hide scrollbar for clean look */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -70,7 +82,7 @@
       }
       /* Arabic Font Support */
       [lang="ar"] {
-        font-family: 'Inter', sans-serif; /* Inter handles basic glyphs, but system fonts will fallback gracefully */
+        font-family: 'Inter', sans-serif; 
       }
 
       /* Force aspect ratio on product previews in dropdowns to prevent cropping */
@@ -121,7 +133,7 @@
       }
     </script>
   </head>
-  <body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
+  <body class="bg-slate-50 text-slate-900 antialiased">
     <div id="root"></div>
   </body>
 </html>
